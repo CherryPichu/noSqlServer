@@ -1,0 +1,66 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Crawling DB Test",
+        "decription": "이상징후탐지 수업"
+    },
+    "host": "uskawjdu.iptime.org:8004",
+    "basePath": "/",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "paths": {
+        "/add": {
+            "post": {
+                "summary": "POST /add",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "logs",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "required": [
+                                "processName",
+                                "PID",
+                                "operate",
+                                "Detail"
+                            ],
+                            "properties": {
+                                "processName": {
+                                    "type": "string",
+                                    "example": "Crazy Arcade"
+                                },
+                                "PID": {
+                                    "type": "string",
+                                    "example": "12342"
+                                },
+                                "operate": {
+                                    "parameter": "string",
+                                    "example": "createPrcess"
+                                },
+                                "Detail": {
+                                    "parameter": "string",
+                                    "example": "Event log : is good game"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "/getAllData": {
+            "get": {
+                "summary": "GET /getAllData",
+                "responses": {}
+            }
+        },
+        "/deleteAllData": {
+            "get": {
+                "summary": "GET /deleteAllData"
+            }
+        }
+    }
+}

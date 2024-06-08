@@ -1,0 +1,8 @@
+ {
+   "db": {
+            "url" : "mongodb://uskawjdu.iptime.org:27017/",
+            "name" :"",  
+            "user" :"root",
+            "password" :""
+    }
+ }
